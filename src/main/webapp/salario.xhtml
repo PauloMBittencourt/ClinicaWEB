@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Clinica|Web</title>
+    </h:head>
+    <h:body>
+        <center>
+        <h1>Clinica|Web</h1>
+        <h:form>
+            <h:panelGrid columns="2">
+                <h:outputText value="Salario"/>
+                <p:inputText value="#{folhaBeans.salario}" required="true" requiredMessage="Insira o salario"/>  
+                <h:outputText value="INSS"/><h:outputText value="#{folhaBeans.inss}"/>
+                <h:outputText value="IRRF"/><h:outputText value="#{folhaBeans.irrf}"/>
+                <h:outputText value="Salario Liquido"/><h:outputText value="#{folhaBeans.salarioliquido}"/>                
+            </h:panelGrid>   
+            <p:commandButton  value="Calcular Salario" action="#{folhaBeans.calcularSalario()}" ajax="false"/>  
+        </h:form>
+        </center>
+        Login: #{usuarioBeans.login}<p/><br/>
+        Senha: #{usuarioBeans.senha}<p/><br/>
+    </h:body>
+</html>
+
